@@ -1,2 +1,2 @@
-# expense
+# Expense
 Merupakan aplikasi pencatatan keuangan.
