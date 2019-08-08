@@ -1,5 +1,5 @@
 <!-- Form Catatan -->
-<form>
+<form id="form_catatan">
     <div class="w3-row w3-margin-bottom w3-margin-top">
         <label for="jenis_transaksi">Jenis Transaksi</label>
         <select name="jenis_transaksi" id="jenis_transaksi" class="w3-input w3-border w3-round">
