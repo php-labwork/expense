@@ -10,8 +10,11 @@
     </div>
     <div class="w3-row w3-responsive">
         <!-- Table Pemasukkan -->
-        <table id="table_transaksi_pemasukan" class="w3-table-all w3-small">
-            <thead>
+        @component ('components.tables')
+            @slot ('table_id')
+                table_transaksi_pemasukan
+            @endslot
+            @slot ('table_head')
                 <tr>
                     <th>No</th>
                     <th>Tanggal</th>
@@ -22,13 +25,13 @@
                     <th>Tanggal / Waktu</th>
                     <th>Aksi</th>
                 </tr>
-            </thead>
-            <tbody>
+            @endslot
+            @slot ('table_body')
                 <tr>
                     <td colspan="8">Belum ada transaksi</td>
                 </tr>
-            </tbody>
-            <tfoot>
+            @endslot
+            @slot ('table_foot')
                 <tr>
                     <th>No</th>
                     <th>Tanggal</th>
@@ -39,12 +42,15 @@
                     <th>Tanggal / Waktu</th>
                     <th>Aksi</th>
                 </tr>
-            </tfoot>
-        </table>
+            @endslot
+        @endcomponent
 
         <!-- Table Pengeluaran -->
-        <table id="table_transaksi_pengeluaran" class="w3-table-all w3-small">
-            <thead>
+        @component ('components.tables')
+            @slot ('table_id')
+                table_transaksi_pengeluaran
+            @endslot
+            @slot ('table_head')
                 <tr>
                     <th>No</th>
                     <th>Tanggal</th>
@@ -55,13 +61,13 @@
                     <th>Tanggal / Waktu</th>
                     <th>Aksi</th>
                 </tr>
-            </thead>
-            <tbody>
+            @endslot
+            @slot ('table_body')
                 <tr>
                     <td colspan="8">Belum ada transaksi</td>
                 </tr>
-            </tbody>
-            <tfoot>
+            @endslot
+            @slot ('table_foot')
                 <tr>
                     <th>No</th>
                     <th>Tanggal</th>
@@ -72,7 +78,7 @@
                     <th>Tanggal / Waktu</th>
                     <th>Aksi</th>
                 </tr>
-            </tfoot>
-        </table>
+            @endslot
+        @endcomponent
     </div>
 </div>
