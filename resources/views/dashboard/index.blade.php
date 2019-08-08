@@ -17,6 +17,14 @@
                 @include ('templates.form_catatan')
             @endcomponent
         </div>
+        <div class="w3-col m6 s12">
+            @component ('components.containers')
+                @slot ('container_title')
+                    Transaksi Terakhir
+                @endslot
+                @include ('templates.tabel_transaksi')
+            @endcomponent
+        </div>
     </div>
 </div>
 {{-- Wrapper Content Stop --}}
