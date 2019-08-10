@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Dashboard@index');
+Route::get('/catatan', 'Catatan@index');
+Route::get('/laporan', 'Laporan@index');
+Route::get('/pengaturan', 'Pengaturan@index');
