@@ -22,6 +22,7 @@ class TableDataCatatan extends Migration
             $table->bigInteger('nominal')->unsigned();
             $table->date('tanggal');
             $table->time('waktu');
+            $table->timestamps();
             $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_jenis_transaksi')->references('id_jenis_transaksi')->on('m_jenis_transaksi');
             $table->foreign('id_laporan_pembukuan')->references('id_laporan_pembukuan')->on('m_laporan_pembukuan');

@@ -17,6 +17,7 @@ class TableMasterDataLaporanPembukuan extends Migration
             $table->increments('id_laporan_pembukuan');
             $table->bigInteger('id_user')->unsigned();
             $table->string('nama_laporan_pembukuan', 255);
+            $table->timestamps();
             $table->foreign('id_user')->references('id')->on('users');
         });
     }

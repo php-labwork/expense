@@ -18,6 +18,7 @@ class TableMasterDataKategori extends Migration
             $table->smallInteger('id_jenis_transaksi')->unsigned();
             $table->bigInteger('id_user')->unsigned();
             $table->string('nama_kategori', 255);
+            $table->timestamps();
             $table->foreign('id_jenis_transaksi')->references('id_jenis_transaksi')->on('m_jenis_transaksi');
             $table->foreign('id_user')->references('id')->on('users');
         });
