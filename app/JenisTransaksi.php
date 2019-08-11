@@ -11,6 +11,6 @@ class JenisTransaksi extends Model {
     protected $table = 'm_jenis_transaksi';
     
     protected $fillable = [
-        'id_jenis_transaksi', 'nama_transaksi'
+        'nama_transaksi'
     ];
 }
