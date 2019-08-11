@@ -15,3 +15,7 @@ Route::get('/', 'Dashboard@index');
 Route::get('/catatan', 'Catatan@index');
 Route::get('/laporan', 'Laporan@index');
 Route::get('/pengaturan', 'Pengaturan@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
