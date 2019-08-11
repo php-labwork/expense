@@ -11,6 +11,6 @@ class Kategori extends Model {
     protected $table = 'm_kategori';
     
     protected $fillable = [
-        'nama_kategori'
+        'id_kategori', 'id_jenis_transaksi', 'id_user', 'nama_kategori'
     ];
 }
