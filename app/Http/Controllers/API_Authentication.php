@@ -34,7 +34,7 @@ class API_Authentication extends Controller {
         ]);
 
         return response()->json(fractal()
-            ->item($data)
+            ->collection($data)
             ->transformWith(new UserTransformer)
             ->toArray(), 200);
     }
