@@ -11,6 +11,6 @@ class LaporanPembukuan extends Model {
     protected $table = 'm_laporan_pembukuan';
     
     protected $fillable = [
-        'nama_laporan_pembukuan'
+        'id_laporan_pembukuan', 'id_user', 'nama_laporan_pembukuan'
     ];
 }
