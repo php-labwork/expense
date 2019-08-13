@@ -9,6 +9,7 @@ use App\Transformers\LaporanPembukuanTransformer;
 
 class API_LaporanPembukuan extends Controller {
     
+    // Get All Laporan Pembukuan
     public function getAll(LaporanPembukuan $laporan) {
         $data = $laporan->all();
         return fractal()
@@ -17,6 +18,7 @@ class API_LaporanPembukuan extends Controller {
             ->toArray();
     }
 
+    // Get All Laporan Pembukuan By User ID
     public function getAllByUserID(LaporanPembukuan $laporan) {
         if (!isset(Auth::user()->id)) {
             return response()->json([
@@ -34,6 +36,7 @@ class API_LaporanPembukuan extends Controller {
             ->toArray();
     }
 
+    // Insert New Laporan Pembukuan
     public function insertNewLaporanPembukuan(Request $request, LaporanPembukuan $laporan) {
         if (!isset(Auth::user()->id)) {
             return response()->json([
@@ -57,6 +60,7 @@ class API_LaporanPembukuan extends Controller {
             ->toArray();
     }
 
+    // Update Laporan Pembukuan
     public function updateLaporanPembukuan(Request $request, LaporanPembukuan $laporan) {
         if (!isset(Auth::user()->id)) {
             return response()->json([
@@ -92,6 +96,7 @@ class API_LaporanPembukuan extends Controller {
             ->toArray(), 200);
     }
 
+    // Delete Laporan Pembukuan
     public function deleteLaporanPembukuan(Request $request, LaporanPembukuan $laporan) {
         if (!isset(Auth::user()->id) && !isset($request->id_laporan_pembukuan)) {
             return response()->json([
